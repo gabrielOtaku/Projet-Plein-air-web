@@ -1,0 +1,274 @@
+:root{
+    --bg-color : slategray;
+    --second-bg-color : white;
+    --mainColor : rgba(66, 151, 73, 0.54);
+    --text-color : white;
+    --color-Icone : #5F9EA0;
+    --color-Img:greenyellow;
+    --text-nav-color : black;
+}
+
+body {
+    background-image: url("../Img/myBackground.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+ 
+}
+
+/*Animation du texte*/
+.text-animation{
+    padding-top: 20px;
+   font-size: 32px;
+   font-weight: 600;
+   min-width: 280px;
+}
+.text-animation span{
+    position: relative;
+}
+.text-animation span::before{
+    content: "Une vie en pleine nature rempli de bien-être";
+    color: var(--bg-color);
+    animation: words 20s infinite;
+    opacity: 0.6;
+   
+}
+.text-animation span::after{
+    content: "";
+    background-color: var(--text-nav-color);
+    opacity: 0.8;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+ 
+}
+
+@keyframes cursor {
+    to{
+        border-left: 3px solid var(--mainColor);
+    }
+}
+
+@keyframes words {
+    0%,
+    20%{
+        content: "Du camping comme vous l'avez jamais vu";
+    }
+    21%,
+    40%{
+        content: "Des activités d'hivers epoustouflantes";
+    }
+    41%,
+    60%{
+        content: "Une expérinces maritimes inégalé";
+    }
+    61%,
+    80%{
+        content: "Rafting / chien de traineau et plein d'autre...";
+    }
+    81%,
+    100%{
+        content: "Venez rejoindre vous aussi l'aventure";
+    }
+}
+
+@keyframes typing {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95%{
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    80%,
+    85%{
+        width: calc(100% + 8px);
+    }
+}
+
+/*Social Netwoks*/
+.wrapper .icon_Network{
+ margin: 0 20px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ position: relative;
+ z-index: 2;
+ cursor: pointer;
+}
+
+.wrapper .icon_Network span{
+    position: relative;
+    height: 60px;
+    width: 60px;
+    display: block;
+    background: var(--color-Icone);
+    border-radius: 50%;
+    z-index: 2;
+    text-align: center;
+    opacity: 1;
+    box-shadow: 0 10px 10px var(--bg-color);
+}
+
+.icon_Network span i{
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.icon_Network:hover span{
+    background: var(--text-nav-color);
+}
+
+.icon_Network:hover span i{
+    color: var(--bg-color);
+    transform: rotate(360deg);
+    transition: 0.5s;
+    opacity: 1;
+    box-shadow: 0 10px 10px var(--color-Icone);
+}
+.wrapper .icon_Network .tooltip{
+    position: absolute;
+    top: 0px;
+    background: var(--bg-color);
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon_Network:hover .tooltip{
+    top: -70px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.wrapper .icon_Network .tooltip::before{
+    position: absolute;
+    content: "";
+    height: 15px;
+    width:15px;
+    background: var(--bg-color);
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.wrapper{
+    display: inline-flex;
+    padding: 15%;
+}
+
+
+/*Paragraphe*/
+.history{
+    color: var(--text-color);
+    margin-left:4% ;
+    padding-top: 15%;
+    padding-bottom: 20%;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #f8a6f8;
+
+}
+button:hover{
+    background-color: rgb(248, 166, 248);
+    transform: scale(1,1.2);
+    transition: 0.5s;
+    opacity: 0.7;
+  
+}
+p{
+   
+    font-size: 1.3em;
+   padding-top: 15px;
+}
+em{
+    color: #f8a6f8;
+}
+h1{
+    font-size: 3em ;
+}
+
+.main__presntation {
+    display: flex;
+    flex-direction: row;
+}
+
+.home-img img {
+    position: relative;
+    width: 32vw;
+    height: 32vw;
+    margin-top: 70px;
+    margin-left: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 25px var(--color-Icone);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+  
+}
+
+.home-img img:hover {
+    box-shadow: 0 0 35px var(--color-Img),
+                0 0 65px var(--color-Img),
+                0 0 120px var(--color-Img);
+}
+
+@media screen and (max-width: 990px){
+    body{
+        background-image: url("../Img/myBackground.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+    }
+   .history{
+    display: flex;
+    flex-wrap: wrap;
+   }
+   .home-img img{
+    width: 32vw;
+    height: 32vw;
+    margin-top: 230px;
+    margin-right: 30px;
+    margin-left: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 25px var(--color-Icone);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    }
+   .home-img img:hover {
+    box-shadow: 0 0 35px var(--color-Icone)
+                0 0 65px var(--color-Icone)
+                0 0 120px var(--color-Icone);
+   }
+   .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+   }
+
+}
+

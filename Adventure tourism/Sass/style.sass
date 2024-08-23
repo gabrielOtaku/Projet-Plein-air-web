@@ -1,0 +1,70 @@
+/* Define base colors */
+$mainColor: slategray;
+$secondColor: white;
+
+/* Create a reusable mixin for resetting margins */
+@mixin resetMargin {
+  margin: 0;
+}
+
+/* Reset margins globally */
+* {
+  @include resetMargin;
+}
+
+/* Style the body element */
+body {
+  background-color: $mainColor;
+  font-family: Arial, sans-serif; /* Set a default font for consistency */
+}
+
+/* Style the navigation element */
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; /* Add some padding for better spacing */
+}
+
+nav &_logo {
+  width: 20%;
+  height: 20%;
+  cursor: pointer; /* Indicate clickable behavior for logos */
+  transition: transform 0.5s ease; /* Specify transition properties for smoother hover effects */
+}
+
+nav &_logo:hover {
+  transform: scale(1.1); /* Adjust hover scale for a more subtle effect */
+}
+
+nav &__navigation {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2em; /* Use em unit for relative sizing */
+  font-weight: bold;
+  padding: 10px 15px; /* Adjust padding for better spacing */
+}
+
+nav &__navigation:hover {
+  color: #94bbe9;
+  text-decoration: underline;
+}
+
+/* Style header and footer elements */
+header, footer {
+  background-color: $secondColor;
+  padding: 20px 50px;
+}
+
+/* Style social network icons */
+.lien-icone {
+  margin-left: 30px;
+  cursor: pointer; /* Indicate clickable behavior */
+  transition: transform 0.5s ease, opacity 0.3s ease; /* Specify transitions for hover effects */
+}
+
+.lien-icone:hover {
+  transform: scale(1.1); /* Adjust hover scale for a subtle effect */
+  opacity: 0.8; /* Adjust hover opacity for better visibility */
+}

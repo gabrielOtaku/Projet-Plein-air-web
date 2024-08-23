@@ -1,0 +1,10 @@
+:root{
+    --text-Color : white;
+}
+
+body{
+    background-color: black;
+}
+table, legend{
+    color: var(--text-Color);
+}

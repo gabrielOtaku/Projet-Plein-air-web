@@ -1,0 +1,89 @@
+:root{
+    --bg-color : slategray;
+    --second-bg-color : white;
+    --mainColor : rgba(66, 151, 73, 0.54);
+    --text-color : white;
+    --text-nav-color : black;
+}
+/*marge a 0*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Footer*/
+footer{
+    color: var(--text-color);
+}
+
+/*Navigation*/
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    scroll-behavior:inherit;
+
+}
+.nav_logo img{
+    width: 20%;
+   height: 20%;
+}  
+.nav__navigation a{
+    color: var(--second-bg-color);
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bold;
+    padding: 15px;
+    margin: 15px;
+}
+
+header, footer {
+    padding: 20px 50px;
+}
+
+.nav__navigation a:hover{
+    color: greenyellow;
+    text-decoration: underline;
+}
+.nav_logo img:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+
+@media screen and (max-width:990px){
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        scroll-behavior:inherit;
+    }
+    nav .nav_logo {
+        width: 20%;
+        height: 20%;
+        cursor: pointer; /* Indicate clickable behavior for logos */
+    }
+    .nav_logo:hover {
+        transform: scale(1.1); /* Adjust hover scale for a more subtle effect */
+    }
+    nav a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: 1.2em; /* Use em unit for relative sizing */
+        font-weight: bold;
+        padding: 10px 15px; /* Adjust padding for better spacing */
+    }
+    nav a:hover {
+        color: var(--color-Icone);
+        text-decoration: underline;
+    }
+    header, footer {
+        padding: 20px 50px;
+    }
+}
+
+
